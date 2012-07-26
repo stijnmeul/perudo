@@ -1,6 +1,6 @@
 <?php
-require_once 'example.php';
-$myExample = new example();
+require_once 'brain.php';
+$myExample = new brain();
 
 // performs some basic operation
 echo '<b>Attempt to perform basic operations</b><br />'."\n";

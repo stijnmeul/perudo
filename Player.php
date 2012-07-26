@@ -1,4 +1,9 @@
 <?php
+
+function __autoload($class_name) {
+    include "$class_name.php";
+}
+
 /**
  * Created by JetBrains PhpStorm.
  * User: stijn
@@ -14,7 +19,7 @@ class Player
     private $isInGame;
     private $brain;
 
-    function __construct($name, $creator, Brain $brain, $isInGame) {
+    function __construct($name, $creator, $isInGame) {
         $this->dices[0] = new Dice();
         $this->dices[1] = new Dice();
         $this->dices[2] = new Dice();
@@ -24,7 +29,6 @@ class Player
         $this->name = $name;
         $this->creator = $creator;
         $this->isInGame = $isInGame;
-        $this->brain = $brain;
     }
 
     public function winDice() {
@@ -69,11 +73,7 @@ class Player
         $this->isInGame = false;
     }
 
-    private function getBrain() {
-        return $this->brain;
-    }
-
-    public function generateMessage($prevPlayerMessages) {
-        $this->getBrain()->generateMessage($this->getDiceNumbers(),$prevPlayerMessages);
+    public function generateMessage($prevPlayerMessages, $nbOfPlayerDices) {
+        //TODO: Deze functie schrijven
     }
 }

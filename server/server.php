@@ -1,9 +1,8 @@
 <?php
 require_once 'jsonRPCServer.php';
-require 'example.php';
-require 'restrictedExample.php';
+require 'brain.php';
 
-$myExample = new restrictedExample();
+$myExample = new brain();
 jsonRPCServer::handle($myExample)
-	or print 'no request';
+    or print 'no request';
 ?>

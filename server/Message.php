@@ -45,7 +45,8 @@ abstract class Message
     public abstract function isHigherThen(Message $message);
 
     public function toArray() {
-        return get_object_vars($this);
+        $msg = get_object_vars($this);
+        return $msg;
     }
 
     public function __toString() {

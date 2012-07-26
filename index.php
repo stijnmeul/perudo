@@ -24,9 +24,11 @@ echo "<br>";
 
 $myDice = new Dice();
 
-$myPlayer = new Player("winner", "Stijn", new Brain(), true);
+$myPlayer = new Player("winner", "Stijn", true);
 $myPlayer->rollDices();
 print_r($myPlayer->getDiceNumbers());
 
+$var = $myMessage->toArray();
+$var["classType"] = get_class($myMessage);
 echo "test";
 
