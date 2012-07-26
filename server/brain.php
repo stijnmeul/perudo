@@ -5,21 +5,43 @@ function __autoload($class_name) {
 }
 
 /**
- * An immaginative class. You can immagine a DB interface instead or what you want
+ * This brain class does the artificial intelligence hocus pocus in our Perudo game.
  *
- * @author sergio <jsonrpcphp@inservibile.org>
+ * @author Stijn Meul <stijn.meul@gmail.com>
  */
 class brain {
 
-    private function generateMessage() {
+    /**
+     * @param   $prevPlayerMessages
+     *          | A numbered array of all the playermessages during this game.
+     * @param   $nbOfPlayerDices
+     *          | A key-value array which gives an overview of the ingame players and their dices.
+     * @return  Message
+     *          | The generated message
+     */
+    private function generateMessage($prevPlayerMessages, $nbOfPlayerDices) {
         /**
          * hier komt het stukje dat messages gaat genereren
          */
         return new Acceptance("host", "client", 2, 5, true);
     }
 
-    public function sendMessage() {
-        $msg = $this->generateMessage();
+    /**
+     * This function will make it possible to communicate with this black box brain class.
+     * DO NOT ALTER THIS FUNCTION!
+     *
+     * @param   $prevPlayerMessages
+     *          | A numbered array of all the playermessages during this game.
+     * @param   $nbOfPlayerDices
+     *          | A key-value array which gives an overview of the ingame players and their dices.
+     * @return  array
+     *          | An array of the generated message object
+     */
+    public function sendMessage($prevPlayerMessages, $nbOfPlayerDices) {
+        // Pass all the thinking about generating messages to the generateMessage function
+        $msg = $this->generateMessage($prevPlayerMessages, $nbOfPlayerDices);
+
+        // Convert the message object to an array which is convertable into a JSON string.
         $msgArray = $msg->toArray();
         $msgArray["classType"] = get_class($msg);
         return $msgArray;
