@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71f13dff-bd33-4edd-81cb-7f8651f441a2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/Dice.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Message.php" afterPath="$PROJECT_DIR$/Message.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client.php" afterPath="$PROJECT_DIR$/client.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsonRPCClient.php" afterPath="$PROJECT_DIR$/jsonRPCClient.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/Message.php" afterPath="$PROJECT_DIR$/server/Message.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/brain.php" afterPath="$PROJECT_DIR$/server/brain.php" />
     </list>
     <ignored path="perudo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,7 +46,7 @@
       <file leaf-file-name="client.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="59" selection-start="505" selection-end="505" vertical-scroll-proportion="0.36585367">
+            <state line="23" column="24" selection-start="685" selection-end="685" vertical-scroll-proportion="0.41463414">
               <folding />
             </state>
           </provider>
@@ -289,7 +284,11 @@
       <created>1343318636681</created>
       <updated>1343318636681</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Changed files for JSON RCP to usefull functions">
+      <created>1343320665231</created>
+      <updated>1343320665231</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -302,7 +301,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24935733" sideWeight="0.60091746" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24935733" sideWeight="0.6712538" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39908257" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -378,7 +377,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/client.php</url>
-          <line>10</line>
+          <line>17</line>
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -477,7 +476,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="59" selection-start="505" selection-end="505" vertical-scroll-proportion="0.36585367">
+        <state line="23" column="24" selection-start="685" selection-end="685" vertical-scroll-proportion="0.41463414">
           <folding />
         </state>
       </provider>

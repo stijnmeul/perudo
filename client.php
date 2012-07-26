@@ -15,6 +15,8 @@ try {
     $prevPlayerMessages[0] = $firstMessage->makeSendable();
     $prevPlayerMessages[1] = $secondMessage->makeSendable();
 
+    $var = toArrayOfMessages($prevPlayerMessages);
+
     $nbOfPlayerDices = array();
     $nbOfPlayerDices["Stijn"] = 5;
     $nbOfPlayerDices["J-P"] = 5;
@@ -24,6 +26,17 @@ try {
     $msg = new $classType($msgArray["sender"],$msgArray["receiver"],$msgArray["nbOfTimes"],$msgArray["values"],$msgArray["isFirstMessage"]);
 } catch (Exception $e) {
     echo nl2br($e->getMessage()).'<br />'."\n";
+}
+
+function toArrayOfMessages(array $messages) {
+    $i=0;
+    $result = array();
+    foreach($messages as $message) {
+        $classType = $message["classType"];
+        $result[$i] = new $classType($message["sender"],$message["receiver"],$message["nbOfTimes"],$message["values"],$message["isFirstMessage"]);
+        $i++;
+    }
+    return $result;
 }
 
 ?>
