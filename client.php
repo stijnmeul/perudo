@@ -8,19 +8,18 @@ $brain = new jsonRPCClient('http://localhost/perudo/server/server.php',true);
 
 // performs some basic operation
 try {
-    phpinfo();
     $firstMessage = new Acceptance("Stijn", "J-P", 3, 5, true);
     $secondMessage = new Acceptance("J-P", "Stijn", 4, 5);
 
     $prevPlayerMessages = array();
-    $prevPlayerMessages[0] = $firstMessage;
-    $prevPlayerMessages[1] = $secondMessage;
+    $prevPlayerMessages[0] = $firstMessage->makeSendable();
+    $prevPlayerMessages[1] = $secondMessage->makeSendable();
 
     $nbOfPlayerDices = array();
     $nbOfPlayerDices["Stijn"] = 5;
     $nbOfPlayerDices["J-P"] = 5;
 
-    $msgArray = $brain->sendMessage($prevPlayerMessages, $nbOfPlayerDices);
+    $msgArray = $brain->sendMessageToClient($prevPlayerMessages, $nbOfPlayerDices);
     $classType = $msgArray["classType"];
     $msg = new $classType($msgArray["sender"],$msgArray["receiver"],$msgArray["nbOfTimes"],$msgArray["values"],$msgArray["isFirstMessage"]);
 } catch (Exception $e) {

@@ -37,14 +37,14 @@ class brain {
      * @return  array
      *          | An array of the generated message object
      */
-    public function sendMessage($prevPlayerMessages, $nbOfPlayerDices) {
+    public function sendMessageToClient($prevPlayerMessages, $nbOfPlayerDices) {
         // Pass all the thinking about generating messages to the generateMessage function
-        $msg = $this->generateMessage($prevPlayerMessages, $nbOfPlayerDices);
+        $message = $this->generateMessage($prevPlayerMessages, $nbOfPlayerDices);
 
         // Convert the message object to an array which is convertable into a JSON string.
-        $msgArray = $msg->toArray();
-        $msgArray["classType"] = get_class($msg);
-        return $msgArray;
+        return $message->makeSendable();
     }
+
+
 }
 ?>
